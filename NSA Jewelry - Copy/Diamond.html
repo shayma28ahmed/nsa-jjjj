@@ -1,0 +1,139 @@
+<!DOCTYPE html>  
+<html>
+<head>
+    <title>Diamond Jewelry</title> 
+    <link rel="stylesheet" href="styles.css">  
+</head>
+<body class="Diamond jewelry-page">  
+    <header>
+       <div class="logo">
+            <img src="NSA.jpg" align="left" width="150" height="100">
+             
+        </div>
+ 
+  <h1>Diamond Jewelry</h1> 
+
+<nav>
+<ul>           
+<li><a href="index.html">Home</a></li>  
+<li><a href="About.html">About us</a></li> 
+<li><a href="jewelry.html">Jewelry</a></li>  
+<li><a href="Reviews.html">Reviews</a></li>
+<li><a href="contact.html">Contact Us</a></li>  
+ </ul> 
+ </nav>
+
+
+
+
+<nav>
+<ul>
+<li><a href="Gold.html">Gold Jewelry</a></li>
+<li><a href="Silver.html"> Silver Jewelry</a></li>
+<li><a href="Diamond.html">Diamond Jewelry</a></li>
+</ul>
+</nav>
+
+
+
+<main>
+ <section>
+ <h2>Diamond Jewelry Collection</h2> 
+ <div class="Diamond gallery">  
+
+
+
+ <div class="item" data-title="Diamond Ring">    <img src="j9.webp" alt="Diamond Ring" height="200" width="300"> 
+  <p class="title">Diamond Ring</p> 
+  <p class="price">18 OMR</p>
+  <button onclick="addToCart('Diamond Ring', 18)">Add to Cart</button>
+                </div>
+                                
+<div class="item" data-title="Unique Earrings">
+<img src="Ph6.JPG" alt="Unique Earrings" height="200" width="300">
+<p class="title"> 
+ Unique Earrings </p>
+<p class="price">10 OMR</p>
+ <button onclick="addToCart('Unique Earrings', 10)">Add to Cart</button>
+                </div>
+
+
+<div class="item" data-title="Diamond Earrings">
+<img src="Ph5.JPG" alt="Diamond Earrings" height="200" width="300">
+<p class="title"> Diamond Neclace </p>
+<p class="price">17 OMR</p>
+<button onclick="addToCart('Diamond Neclace ', 17)">Add to Cart</button>
+                </div>
+
+ <div class="item" data-title="Eterna Elegance">
+<img src="Ph10.JPG" alt="Eterna Elegance" height ="200" width="300" >
+<p class="title"> Eterna Elegance </p>
+<p class="price">30 OMR</p>
+<button onclick="addToCart(' Eterna Elegance ', 30)">Add to Cart</button>
+                </div>
+
+ <div class="item" data-title=" Pearluxe Diamond">
+<img src="Ph9.JPG" alt="Pearluxe Diamond" height ="200" width="300" >
+<p class="title"> Pearluxe Diamond </p>
+<p class="price">25 OMR</p>
+<button onclick="addToCart('  Pearluxe Diamond', 25)">Add to Cart</button>
+                </div>
+
+
+<div class="item" data-title="Wedding Ring">       <img src="j17.jpeg" alt="Wedding Ring" height="200" width="300"> 
+   <p class="title">Wedding Ring</p> 
+    <p class="price">23 OMR</p>
+	<button onclick="addToCart('  Wedding Ring', 23)">Add to Cart</button>
+                </div>
+                
+<div class="item" data-title="Radiant Luxe">       <img src="Ph20.JPG" alt="Radiant Luxe" height="200" width="300"> 
+   <p class="title">Radiant Luxe</p> 
+    <p class="price">40 OMR</p>
+	<button onclick="addToCart('  Radiant Luxe', 40)">Add to Cart</button>
+                </div>
+
+
+<div class="item" data-title="Celestial Spark">       <img src="Ph19.JPG" alt="Celestial Spark" height="200" width="300"> 
+   <p class="title">Celestial Spark</p> 
+    <p class="price">15 OMR</p>
+	<button onclick="addToCart('  Celestial Spark', 15)">Add to Cart</button>
+                </div>
+ </div>
+ </section>
+    </main>
+		 <section>
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total Price: <span id="total-price">0.00</span> OMR</p>
+        </section>
+    </main> 
+	
+	    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let cart = [];
+            let totalPrice = 0;
+
+            function addToCart(productName, productPrice) {
+                cart.push({ name: productName, price: productPrice });
+                totalPrice += productPrice;
+                updateCart();
+            }
+
+            function updateCart() {
+                const cartItems = document.getElementById("cart-items");
+                const total = document.getElementById("total-price");
+                
+                cartItems.innerHTML = "";
+                cart.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = item.name + ' - OMR ' + item.price.toFixed(2);
+                    cartItems.appendChild(li);
+                });
+                total.textContent = totalPrice.toFixed(2);
+            }
+
+            window.addToCart = addToCart;
+        });
+		</script>
+</html>
+    

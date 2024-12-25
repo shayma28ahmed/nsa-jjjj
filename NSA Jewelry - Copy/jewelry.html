@@ -1,0 +1,298 @@
+ <html>
+<head>
+    <title>NSA Jewelry - Jewelry</title> 
+    <link rel="stylesheet" href="styles.css">  
+</head>
+<body class="jewelry-page">  
+    <header>
+       <div class="logo">
+            <img src="NSA.jpg" align="left" width="150" height="100">
+        </div>
+        <h1>Jewelry</h1> 
+        <nav>
+            <ul>           
+                <li><a href="index.html">Home</a></li>  
+                <li><a href="About.html">About us</a></li> 
+                <li><a href="jewelry.html">Jewelry</a></li>  
+                <li><a href="Reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact Us</a></li>  
+            </ul> 
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="Gold.html">Gold Jewelry</a></li>
+                <li><a href="Silver.html"> Silver Jewelry</a></li>
+                <li><a href="Diamond.html">Diamond Jewelry</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">  
+            <input type="text" placeholder="Search..." class="search-input" oninput="showSuggestions(this.value)">  
+            <button class="search-button" onclick="searchFunction()">Search</button>  
+            <div class="suggestions" id="suggestions"></div>  
+        </div>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Our Jewelry Collection</h2> 
+            <div class="gallery">  
+                <div class="item" data-title="Unique Earrings">
+                    <img src="Ph6.JPG" alt="Unique Earrings" height="200" width="300">
+                    <p class="title"> Unique Earrings </p>
+                    <p class="price">10 OMR</p>
+                    <button onclick="addToCart('Unique Earrings', 10)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Diamond Earrings">
+                    <img src="Ph5.JPG" alt="Diamond Earrings" height="200" width="300">
+                    <p class="title"> Diamond Necklace </p>
+                    <p class="price">17 OMR</p>
+                    <button onclick="addToCart('Diamond Necklace', 17)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Eterna Elegance">
+                    <img src="Ph10.JPG" alt="Eterna Elegance" height="200" width="300">
+                    <p class="title"> Eterna Elegance </p>
+                    <p class="price">30 OMR</p>
+                    <button onclick="addToCart('Eterna Elegance', 30)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Pearluxe Diamond">
+                    <img src="Ph9.JPG" alt="Pearluxe Diamond" height="200" width="300">
+                    <p class="title"> Pearluxe Diamond </p>
+                    <p class="price">25 OMR</p>
+                    <button onclick="addToCart('Pearluxe Diamond', 25)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Dangling Earrings">
+                    <img src="j6.jpg" alt="Dangling Earrings" height="200" width="300">
+                    <p class="title">Dangling Earrings</p>
+                    <p class="price">15 OMR</p>
+                    <button onclick="addToCart('Dangling Earrings', 15)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Pearl Necklace">
+                    <img src="j7.jpg" alt="Pearl Necklace" height="200" width="300">
+                    <p class="title">Pearl Necklace</p>
+                    <p class="price">20 OMR</p>
+                    <button onclick="addToCart('Pearl Necklace', 20)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Gold Bracelet">
+                    <img src="j8.jpg" alt="Gold Bracelet" height="200" width="300"> 
+                    <p class="title">Gold Bracelet</p>     
+                    <p class="price">12 OMR</p>
+                    <button onclick="addToCart('Gold Bracelet', 12)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Solitaire Ring">  
+                    <img src="j5.webp" alt="Solitaire Ring" height="200" width="300"> 
+                    <p class="title">Solitaire Ring</p>
+                    <p class="price">10 OMR</p>  
+                    <button onclick="addToCart('Solitaire Ring', 10)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Diamond Ring">  
+                    <img src="j9.webp" alt="Diamond Ring" height="200" width="300"> 
+                    <p class="title">Diamond Ring</p> 
+                    <p class="price">18 OMR</p>
+                    <button onclick="addToCart('Diamond Ring', 18)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Hoop Earrings">   
+                    <img src="Ph13.JPG" alt="Hoop Earrings" height="200" width="300"> 
+                    <p class="title">Hoop Earrings</p> 
+                    <p class="price">22 OMR</p>
+                    <button onclick="addToCart('Hoop Earrings', 22)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Aurore Band">   
+                    <img src="Ph11.JPG" alt="Aurore Band" height="200" width="300"> 
+                    <p class="title">Aurore Band</p> 
+                    <p class="price">14 OMR</p>
+                    <button onclick="addToCart('Aurore Band', 14)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Gemstone Necklace">     
+                    <img src="j11.jpeg" alt="Gemstone Necklace" height="200" width="300"> 
+                    <p class="title">Gemstone Necklace</p> 
+                    <p class="price">25 OMR</p>
+                    <button onclick="addToCart('Gemstone Necklace', 25)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Silver Halo">         
+                    <img src="Ph17.JPG" alt="Silver Halo" height="200" width="300">
+                    <p class="title">Silver Halo</p>
+                    <p class="price">25 OMR</p>
+                    <button onclick="addToCart('Silver Halo', 25)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Silver Bracelet">    
+                    <img src="j12.avif" alt="Silver Bracelet" height="200" width="300">
+                    <p class="title">Silver Bracelet</p> 
+                    <p class="price">30 OMR</p>
+                    <button onclick="addToCart('Silver Bracelet', 30)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Unique Ring">   
+                    <img src="j13.jpeg" alt="Unique Ring" height="200" width="300">
+                    <p class="title">Unique Ring</p> 
+                    <p class="price">14 OMR</p>
+                    <button onclick="addToCart('Unique Ring', 14)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Crystal Earrings">         
+                    <img src="j14.jpg" alt="Crystal Earrings" height="200" width="300">
+                    <p class="title">Crystal Earrings</p>
+                    <p class="price">17 OMR</p>
+                    <button onclick="addToCart('Crystal Earrings', 17)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Gold Pendant">    
+                    <img src="j15.avif" alt="Gold Pendant" height="200" width="300"> 
+                    <p class="title">Gold Pendant</p> 
+                    <p class="price">21 OMR</p>
+                    <button onclick="addToCart('Gold Pendant', 21)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Solara Glow">     
+                    <img src="Ph14.JPG" alt="Solara Glow" height="200" width="300"> 
+                    <p class="title">Solara Glow</p> 
+                    <p class="price">21 OMR</p>
+                    <button onclick="addToCart('Solara Glow', 21)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Radiant Luxe">       
+                    <img src="Ph20.JPG" alt="Radiant Luxe" height="200" width="300"> 
+                    <p class="title">Radiant Luxe</p> 
+                    <p class="price">40 OMR</p>
+                    <button onclick="addToCart('Radiant Luxe', 40)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Celestial Spark">       
+                    <img src="Ph19.JPG" alt="Celestial Spark" height="200" width="300"> 
+                    <p class="title">Celestial Spark</p> 
+                    <p class="price">15 OMR</p>
+                    <button onclick="addToCart('Celestial Spark', 15)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Wedding Ring">       
+                    <img src="j17.jpeg" alt="Wedding Ring" height="200" width="300"> 
+                    <p class="title">Wedding Ring</p> 
+                    <p class="price">23 OMR</p>
+                    <button onclick="addToCart('Wedding Ring', 23)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Luxury Earrings">      
+                    <img src="j18.jpg" alt="Luxury Earrings" height="200" width="300"> 
+                    <p class="title">Luxury Earrings</p> 
+                    <p class="price">27 OMR</p>
+                    <button onclick="addToCart('Luxury Earrings', 27)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Modern Necklace">   
+                    <img src="j19.avif" alt="Modern Necklace" height="200" width="300"> 
+                    <p class="title">Modern Necklace</p> 
+                    <p class="price">29 OMR</p>
+                    <button onclick="addToCart('Modern Necklace', 29)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Golden Horizon">     
+                    <img src="Ph12.JPG" alt="Golden Horizon" height="200" width="300"> 
+                    <p class="title">Golden Horizon</p> 
+                    <p class="price"> 35 OMR</p>
+                    <button onclick="addToCart('Golden Horizon', 35)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Eternal Gleam ">     
+                    <img src="Ph15.JPG" alt="Eternal Gleam" height="200" width="300"> 
+                    <p class="title">Eternal Gleam</p> 
+                    <p class="price">23 OMR</p>
+                    <button onclick="addToCart('Eternal Gleam', 23)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Golden Mirage">     
+                    <img src="Ph16.JPG" alt="Golden Mirage" height="200" width="300"> 
+                    <p class="title">Golden Mirage</p> 
+                    <p class="price">27 OMR</p>
+                    <button onclick="addToCart('Golden Mirage', 27)">Add to Cart</button>
+                </div>
+
+                <div class="item" data-title="Decorative Bracelet">  
+                    <img src="j20.avif" alt="Decorative Bracelet" height="200" width="300"> 
+                    <p class="title">Decorative Bracelet</p>
+                    <p class="price">35 OMR</p>
+                    <button onclick="addToCart('Decorative Bracelet', 35)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total Price: <span id="total-price">0.00</span> OMR</p>
+        </section>
+    </main>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let cart = [];
+            let totalPrice = 0;
+
+            function addToCart(productName, productPrice) {
+                cart.push({ name: productName, price: productPrice });
+                totalPrice += productPrice;
+                updateCart();
+            }
+
+            function updateCart() {
+                const cartItems = document.getElementById("cart-items");
+                const total = document.getElementById("total-price");
+                
+                cartItems.innerHTML = "";
+                cart.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = item.name + ' - OMR ' + item.price.toFixed(2);
+                    cartItems.appendChild(li);
+                });
+                total.textContent = totalPrice.toFixed(2);
+            }
+
+            window.addToCart = addToCart;
+        });
+
+
+    function showSuggestions(q) {
+        const c = document.getElementById('suggestions');
+        c.innerHTML = '';
+        if (!q) return c.style.display = 'none';
+
+        let hasSuggestions = false;
+        document.querySelectorAll('.gallery .item').forEach(item => {
+            const title = item.dataset.title.toLowerCase();
+            if (title.includes(q.toLowerCase())) {
+                hasSuggestions = true;
+                const suggestionItem = document.createElement('div');
+                suggestionItem.className = 'suggestion-item';
+                suggestionItem.textContent = title;
+                suggestionItem.onclick = () => {
+                    document.querySelector('.search-input').value = title;
+                    searchFunction();
+                    c.innerHTML = '';
+                    c.style.display = 'none';
+                };
+                c.appendChild(suggestionItem);
+            }
+        });
+        c.style.display = hasSuggestions ? 'block' : 'none';
+    }
+
+    const searchFunction = () => {
+        const q = document.querySelector('.search-input').value.toLowerCase();
+        document.querySelectorAll('.gallery .item').forEach(item => {
+            item.style.display = item.dataset.title.toLowerCase().includes(q) ? '' : 'none';
+        });
+    };
+</script>
+</body>
+</html>
